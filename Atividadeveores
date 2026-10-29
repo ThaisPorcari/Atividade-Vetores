@@ -1,0 +1,90 @@
+# Atividade-Vetores
+TECH-5 – Sessão 3: Aprofundando o Design de Algoritmo
+
+# Atividade 1
+
+programa
+{
+    funcao inicio()
+    {
+        inteiro numero[10]
+        inteiro i, j, aux
+
+        para(i = 0; i < 10; i++)
+        {
+            escreva("Digite o ", i + 1, " numero: ")
+            leia(numero[i])
+        }
+
+        // Ordenacao decrescente
+        para(i = 0; i < 9; i++)
+        {
+            para(j = 0; j < 9 - i; j++)
+            {
+                se(numero[j] < numero[j + 1])
+                {
+                    aux = numero[j]
+                    numero[j] = numero[j + 1]
+                    numero[j + 1] = aux
+                }
+            }
+        }
+
+        // Exibicao dos numeros ordenados
+        escreva("\nNumeros em ordem decrescente:\n")
+
+        para(i = 0; i < 10; i++)
+        {
+            escreva(numero[i], " ")
+        }
+    }
+}
+
+# Atividade 2
+
+programa
+{
+    funcao inicio()
+    {
+        inteiro numero[10]
+        inteiro i, soma
+        real media
+
+        soma = 0
+
+        para(i = 0; i < 10; i++)
+        {
+            escreva("Digite o ", i + 1, " numero: ")
+            leia(numero[i])
+
+            soma = soma + numero[i]
+        }
+
+        escreva("\nElementos nos indices impares:\n")
+
+        para(i = 0; i < 10; i++)
+        {
+            se(i % 2 != 0)
+            {
+                escreva(numero[i], " ")
+            }
+        }
+
+        escreva("\n\nNumeros pares do vetor:\n")
+
+        para(i = 0; i < 10; i++)
+        {
+            se(numero[i] % 2 == 0)
+            {
+                escreva(numero[i], " ")
+            }
+        }
+
+        escreva("\n\nSoma dos elementos: ", soma)
+
+        media = soma / 10.0
+
+        escreva("\nMedia dos elementos: ", media)
+    }
+}
+
